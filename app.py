@@ -125,8 +125,6 @@ else:
 if st.session_state.recommendations is not None:
 
     recommendations = st.session_state.recommendations
-    
-
 
     st.divider()
 
@@ -346,6 +344,7 @@ if st.session_state.selected_movie_details is not None:
         tmdb_id = details.get("tmdb_id")
 
         if tmdb_id:
+            tmdb_id = int(tmdb_id)
 
             tmdb_url = f"https://www.themoviedb.org/movie/{tmdb_id}"
 
