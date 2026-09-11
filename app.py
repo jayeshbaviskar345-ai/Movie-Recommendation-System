@@ -213,7 +213,7 @@ if st.session_state.recommendations is not None:
 
                     "score": score,
 
-                    "tmdb_id": tmdb_id
+                    "tmdb_id": int(tmdb_id)
 
                 }
 
