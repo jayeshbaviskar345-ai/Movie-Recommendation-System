@@ -345,7 +345,7 @@ if st.session_state.selected_movie_details is not None:
 
         if tmdb_id:
 
-            tmdb_url = f"https://www.themoviedb.org/movie/{int(tmdb_id)}"
+            tmdb_url = f"https://www.themoviedb.org/movie/{tmdb_id}"
 
             st.link_button(
                 "🌐 View on TMDb",
