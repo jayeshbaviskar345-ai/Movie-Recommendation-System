@@ -125,8 +125,7 @@ else:
 if st.session_state.recommendations is not None:
 
     recommendations = st.session_state.recommendations
-    st.write(recommendations)
-
+    
     st.divider()
 
     st.subheader("🎬 Recommended Movies")
