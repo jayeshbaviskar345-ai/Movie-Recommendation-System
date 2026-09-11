@@ -126,6 +126,7 @@ if st.session_state.recommendations is not None:
 
     recommendations = st.session_state.recommendations
     
+
     st.divider()
 
     st.subheader("🎬 Recommended Movies")
@@ -153,12 +154,12 @@ if st.session_state.recommendations is not None:
             if poster:
                 st.image(
                     poster,
-                    use_container_width=True
+                    width="stretch"
                 )
             else:
                 st.image(
                     "https://via.placeholder.com/500x750?text=No+Poster",
-                    use_container_width=True
+                    width="stretch"
                 )
 
             st.markdown(
@@ -200,7 +201,7 @@ if st.session_state.recommendations is not None:
             if st.button(
                 "🎬 View Details",
                 key=f"movie_{i}",
-                use_container_width=True
+                width="stretch"
             ):
 
                 st.session_state.selected_movie_details = {
@@ -239,7 +240,7 @@ if st.session_state.selected_movie_details is not None:
         if details["poster"]:
             st.image(
                 details["poster"],
-                use_container_width=True
+                width="stretch"
             )
 
     # ---------------- RIGHT COLUMN ---------------- #
@@ -350,7 +351,7 @@ if st.session_state.selected_movie_details is not None:
             st.link_button(
                 "🌐 View on TMDb",
                 tmdb_url,
-                use_container_width=True
+                width="stretch"
                 )
 
         st.subheader("📝 Overview")
